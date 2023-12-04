@@ -4,26 +4,20 @@ import { StyleSheet, Text, View, Image, ImageBackground, Button, Pressable, Moda
 import Greet from './components/Greet';
 import StyleElement from './components/StyleElement';
 import Box from './components/Box';
+import DimensionApi from './components/DimensionApi';
 //import Modal from './src/Pressable';
 
 const Long = require('./assets/adaptive-icon.png')
 export default function App() {
   const [isModal, setIsModal] = useState(false)
   return (
-   <View style={styles.container}>
-    <Box style={{backgroundColor: "#8e9b00"}}>Box 1</Box>
-    <Box style={{backgroundColor: "#b65d1f"}}>Box 2</Box>
-    <Box style={{backgroundColor: "#1c4c56"}}>Box 3</Box>
-    <Box style={{backgroundColor: "#6b0803"}}>Box 4</Box>
-    <Box style={{backgroundColor: "#0b9f21"}}>Box 5</Box>
-   </View>
+    <DimensionApi/>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row-reverse',
     marginTop: 40,
     borderWidth: 6,
     borderColor: "red"
