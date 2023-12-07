@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { useState } from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground, Button, Pressable, Modal, ActivityIndicator, Alert} from 'react-native';
 import Greet from './components/Greet';
@@ -11,7 +12,12 @@ const Long = require('./assets/adaptive-icon.png')
 export default function App() {
   const [isModal, setIsModal] = useState(false)
   return (
-    <DimensionApi/>
+    <SafeAreaProvider>
+        <SafeAreaView style={{flex: 1, backgroundColor: "plum"}}>
+          <DimensionApi/>
+        </SafeAreaView>
+    </SafeAreaProvider>
+  
   );
 }
 

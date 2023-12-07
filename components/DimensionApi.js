@@ -1,10 +1,19 @@
-import { StyleSheet, Text, View, Dimensions } from "react-native"
+import { StyleSheet, Text, View, useWindowDimensions, SafeAreaView} from "react-native"
+import Mytext from "../src/Mytext"
 
 export default function DimensionApi(){
+    const windowHeight = useWindowDimensions().height
+    const windowWidth = useWindowDimensions().width
     return (
         <View style={Styles.container}>
             <View style={Styles.box}>
-                <Text style={Styles.text}>Welcome to development!!</Text>
+                <Text style={{fontSize: windowHeight > 500 ? 24 : 30}}>
+                   {
+                    windowWidth > 500 ? "Welcome changes": "hummmm wel"
+                   }
+                    Welcome to development!! cool
+                </Text>
+                <Mytext/>
             </View>
         </View>
     )
@@ -17,15 +26,10 @@ const Styles = StyleSheet.create({
     container:{
         flex: 1,
         backgroundColor: "plum",
-        justifyContent: "center",
-        alignItems:"center"
     },
     box: {
-        width:  "90%",
-        height: "70%",
+      
         backgroundColor:"lightblue",
-        justifyContent:"center",
-        alignItems: "center"
     },
     text: {
         fontSize: 24
