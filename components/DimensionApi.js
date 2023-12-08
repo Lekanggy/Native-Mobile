@@ -11,7 +11,7 @@ export default function DimensionApi(){
                    {
                     windowWidth > 500 ? "Welcome changes": "hummmm wel"
                    }
-                    Welcome to development!! cool
+                    Welcome to development!! cool set yah me
                 </Text>
                 <Mytext/>
             </View>
