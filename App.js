@@ -1,12 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+//import { StatusBar } from 'expo-status-bar';
+import { SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 import { useState } from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground, Button, Pressable, Modal, ActivityIndicator, Alert, ScrollView} from 'react-native';
+import { StyleSheet,StatusBar, Text, View, Image, ImageBackground, Button, Pressable, Modal, ActivityIndicator, Alert, ScrollView} from 'react-native';
 import Greet from './components/Greet';
 import StyleElement from './components/StyleElement';
 import Box from './components/Box';
 import DimensionApi from './components/DimensionApi';
 import PokemonCard from './src/poker/PokemonCard';
+import Lists from './components/Lists';
 //import Modal from './src/Pressable';
 
 const Long = require('./assets/adaptive-icon.png')
@@ -51,12 +52,13 @@ export default function App() {
   return (
     <SafeAreaProvider>
         <SafeAreaView style={styles.container}>
-          <ScrollView>
+          {/* <ScrollView>
             <PokemonCard {...charmanderData}/>
             <PokemonCard {...squirtleData}/>
             <PokemonCard {...bulbasaurData}/>
             <PokemonCard {...pikachuData}/>
-          </ScrollView>
+          </ScrollView> */}
+          <Lists/>
         </SafeAreaView>
     </SafeAreaProvider>
   
@@ -66,7 +68,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-   backgroundColor: "#f5f5f5"
+   backgroundColor: "#f5f5f5",
+   paddingTop: StatusBar.currentHeight,
+   paddingHorizontal: 16,
   },
 });
 
