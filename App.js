@@ -8,6 +8,7 @@ import Box from './components/Box';
 import DimensionApi from './components/DimensionApi';
 import PokemonCard from './src/poker/PokemonCard';
 import Lists from './components/Lists';
+import Form from './src/Form';
 //import Modal from './src/Pressable';
 
 const Long = require('./assets/adaptive-icon.png')
@@ -58,7 +59,8 @@ export default function App() {
             <PokemonCard {...bulbasaurData}/>
             <PokemonCard {...pikachuData}/>
           </ScrollView> */}
-          <Lists/>
+          {/* <Lists/> */}
+            <Form/>
         </SafeAreaView>
     </SafeAreaProvider>
   

@@ -17,7 +17,7 @@ const Lists = () => {
     }}
     keyExtractor={({item, index})=>item?.id.toString()}
     //ItemSeparatorComponent={<v></>}
-    ListEmptyComponent={<Text>No item found</Text>}
+    ListEmptyComponent={<Text>No item found right</Text>}
    />
   )
 }
